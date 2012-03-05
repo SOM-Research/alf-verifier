@@ -9,6 +9,6 @@ Prior to installing the *Alf-verifier*, you should ensure that you have installe
 == Installing Alf-verifier plug-in ==
 
 *Alf-verifier* is an Eclipse plug-in. In order to install the plug-in from the jar files, you should:
-  * Download Alf-verifier JAR file from _here_.
+  * Download Alf-verifier file *alf_verifier_plugin.zip* from <a href="http://code.google.com/a/eclipselabs.org/p/alf-verifier/downloads/detail?name=alf_verifier_plugin.zip&can=2&q=#makechanges">here</a>.
   * Put the file in the \eclipse\plugins folder.
   * Restart Eclipse.
