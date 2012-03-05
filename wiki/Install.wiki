@@ -2,9 +2,9 @@
 == System Requirements ==
 
 *Alf-verifier* plug-in requires the following minimal requirements to be run:
-  * Java JDK 6 [1]
-  * Eclipse Helios (3.6) [2]
-  * It is strongly recommended to have the UML2Tools plug-in (version 0.9) [3] in your Eclipse installation in order to create and visualize UML diagrams in a proper way.
+  * Java JDK 6
+  * Eclipse Helios (3.6)
+  * It is strongly recommended to have the UML2Tools plug-in (version 0.9) in your Eclipse installation in order to create and visualize UML diagrams in a proper way.
 
 == Installing Alf-verifier plug-in ==
 
@@ -14,8 +14,3 @@
   * Restart your Eclipse.
 
 Once this is done the *Alf-verifier* plug-in I ready to be used!
-
-== Links == 
-[1] Java JDK 6: http://www.oracle.com/technetwork/java/javase/downloads/index.html (last visit: March 2012)
-[2] Eclipse Helios 3.6: http://www.eclipse.org/downloads/packages/release/helios/sr2 (last visit: March 2012)
-[3] UML2Tools v 0.9: http://www.eclipse.org/modeling/mdt/downloads/?project=uml2 (last visit: March 2012)
