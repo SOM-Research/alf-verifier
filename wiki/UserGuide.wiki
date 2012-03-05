@@ -1,0 +1,9 @@
+<wiki:toc max_depth="1" />
+
+= Showing Alf-verifier views =
+
+*Alf-verifier* plug-in is designed to work as an Eclipse view. Therefore, the first thing to be done is telling Eclipse to show the corresponding views.
+
+To show the *Alf-verifier* views, go to: _Window_ > _Show View_ > _Other_ and select under _SeverificationTreeView_ both _Alf verifier – input_ and _Alf verifier - feedback_ views.
+
+Check that the two views are available in the views section:
