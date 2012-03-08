@@ -77,7 +77,7 @@ As can be observed, the feedback provided by *Alf-verifier* consists of a tree w
 
 = Examle =
 
-See a complete example here.
+See a complete example <a href="http://code.google.com/a/eclipselabs.org/p/alf-verifier/wiki/Example?ts=1331219359&updated=Example">here</a>.
 
 
 
