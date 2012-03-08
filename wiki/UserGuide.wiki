@@ -40,6 +40,8 @@ The file containing the Alf operations can be created using Eclipse text files o
 
 http://svn.codespot.com/a/eclipselabs.org/alf-verifier/wiki/UserGuide.Fig5.ExampleAlfOperationsFile.PNG
 
+To see the rules of Alf Action language, goes <a href="http://www.omg.org/spec/ALF/">here</a>. 
+
 = Importing _.uml_ and _.alf_ files to Alf-verifier =
 
 Our method takes as input the _.uml_ and the _.alf_ files.
@@ -79,8 +81,6 @@ As can be observed, the feedback provided by *Alf-verifier* consists of a tree w
 = Examle =
 
 See a complete example <a href="http://code.google.com/a/eclipselabs.org/p/alf-verifier/wiki/Example?ts=1331219359&updated=Example">here</a>.
-
-
 
 
 
