@@ -1,0 +1,49 @@
+<wiki:toc max_depth="2" />
+
+= UML Class Diagram =
+
+Take as example the following UML Class Diagram, meant to partially model the menus offered by a restaurant chain:
+
+http://svn.codespot.com/a/eclipselabs.org/alf-verifier/wiki/Example.Fig1.ClassDiagram.PNG
+
+= Alf operation =
+
+Take also the following Alf operation, which classifies an existing menu as an special menu:
+
+`activity classifyAsSpecialMenu(in _discount:Real){` <br>
+`	if ( _discount >= 10 ){` <br>
+`		classify self to SpecialMenu;` <br>
+`		self.discount = _discount;` <br>
+`	}` <br>
+`}`
+
+= Verifying the operation =
+
+When we verify the strong executability the operation _classifyAsSpecialMenu_, we obtain the following feedback:
+
+http://svn.codespot.com/a/eclipselabs.org/alf-verifier/wiki/UserGuide.Fig8.Feedback.PNG
+
+As the above feedback shows, operation _classifyAsSpecialMenu_ is not strongly executable, since it may violate the constraint _AtMost3SpecialMenus_ (when the system state already contains three special menus).
+
+= Repairing the operation =
+
+The feedback tab proposes three alternatives to avoid the above violation:
+
+  * Alternative 1: Add a guard ensuring there are not three special menus.
+  * Alternative 2: Destroy an existing special menu.
+  * Alternative 3: Reclassifies from SpecialMenu an existing special menu.
+
+In order to correct the operation, we add the first alternative to our code:
+
+`activity classifyAsSpecialMenu(in _discount:Real){` <br>
+`	if ( _discount >= 10 and SpecialMenu.allInstances()->size<3 ){` <br>
+`		classify self to SpecialMenu;` <br> 
+`		self.discount = _discount;`<br>
+`	}` <br>
+`}` <br>
+
+If we verify again the corrected operation, we obtain the following feedback:
+
+http://svn.codespot.com/a/eclipselabs.org/alf-verifier/wiki/Example.Fig2.Feedback.PNG
+ 
+As can be observed, _classifyAsSpecialMenu_ is now strongly executable.
