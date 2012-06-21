@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_WdK-YBwVEeGYTqt31cbYFA" name="ReclObjectPVATest">
+  <elementImport xmi:id="_Wdw0hBwVEeGYTqt31cbYFA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_Wdw0hRwVEeGYTqt31cbYFA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_Wdw0hhwVEeGYTqt31cbYFA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_Wdw0hxwVEeGYTqt31cbYFA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-UgDUBwWEeGYTqt31cbYFA" name="Futbolista">
+    <generalization xmi:id="_JfSgwBwXEeGYTqt31cbYFA" general="_BThZMBwXEeGYTqt31cbYFA" generalizationSet="_EDzIcBwXEeGYTqt31cbYFA"/>
+    <ownedAttribute xmi:id="_mJrzMBwYEeGYTqt31cbYFA" name="nom" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="__5E0cBwWEeGYTqt31cbYFA" name="Corredor">
+    <generalization xmi:id="_PFWxYBwXEeGYTqt31cbYFA" general="_BThZMBwXEeGYTqt31cbYFA" generalizationSet="_EDzIcBwXEeGYTqt31cbYFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BThZMBwXEeGYTqt31cbYFA" name="Esportista"/>
+  <packagedElement xmi:type="uml:GeneralizationSet" xmi:id="_EDzIcBwXEeGYTqt31cbYFA" name="genset1" isCovering="true" isDisjoint="true" generalization="_JfSgwBwXEeGYTqt31cbYFA _PFWxYBwXEeGYTqt31cbYFA __vF_gBy6EeGW2rS14ZonwA _ASOtYCDPEeGU8JdCpJNhwA"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_SfzfABwXEeGYTqt31cbYFA" name="Cotxe"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Ts154BwXEeGYTqt31cbYFA" name="Possessio" memberEnd="_Ts_q4BwXEeGYTqt31cbYFA _Ts_q4xwXEeGYTqt31cbYFA">
+    <ownedEnd xmi:id="_Ts_q4BwXEeGYTqt31cbYFA" name="futbolista" type="_-UgDUBwWEeGYTqt31cbYFA" association="_Ts154BwXEeGYTqt31cbYFA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ts_q4hwXEeGYTqt31cbYFA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ts_q4RwXEeGYTqt31cbYFA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Ts_q4xwXEeGYTqt31cbYFA" name="cotxe" type="_SfzfABwXEeGYTqt31cbYFA" association="_Ts154BwXEeGYTqt31cbYFA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ts_q5RwXEeGYTqt31cbYFA" value="4"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ts_q5BwXEeGYTqt31cbYFA" value="2"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_hp2nUBwXEeGYTqt31cbYFA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_hp2nURwXEeGYTqt31cbYFA">
+      <language>OCL</language>
+      <body>context Futbolista inv maxInstances: class.allInstances()->size()>3</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6Da2IBy6EeGW2rS14ZonwA" name="Tenista">
+    <generalization xmi:id="__vF_gBy6EeGW2rS14ZonwA" general="_BThZMBwXEeGYTqt31cbYFA" generalizationSet="_EDzIcBwXEeGYTqt31cbYFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-kjDkCDOEeGU8JdCpJNhwA" name="Ciclista">
+    <generalization xmi:id="_ASOtYCDPEeGU8JdCpJNhwA" general="_BThZMBwXEeGYTqt31cbYFA" generalizationSet="_EDzIcBwXEeGYTqt31cbYFA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8v8XwCDhEeGU8JdCpJNhwA" name="Novia"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="__WtlsCDhEeGU8JdCpJNhwA" name="Relacio" memberEnd="__W3WsCDhEeGU8JdCpJNhwA __W3WsyDhEeGU8JdCpJNhwA">
+    <ownedEnd xmi:id="__W3WsCDhEeGU8JdCpJNhwA" name="futbolista" type="_-UgDUBwWEeGYTqt31cbYFA" association="__WtlsCDhEeGU8JdCpJNhwA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__W3WsiDhEeGU8JdCpJNhwA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__W3WsSDhEeGU8JdCpJNhwA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="__W3WsyDhEeGU8JdCpJNhwA" name="novia" type="_8v8XwCDhEeGU8JdCpJNhwA" association="__WtlsCDhEeGU8JdCpJNhwA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__W3WtSDhEeGU8JdCpJNhwA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__W3WtCDhEeGU8JdCpJNhwA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Package>

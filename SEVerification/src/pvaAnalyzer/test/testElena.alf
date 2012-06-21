@@ -1,0 +1,104 @@
+activity newPlate (in _description: String, in _substitutedPlates:Plate[*]){
+	Plate p = new Plate(); 
+	p.description = _description; 
+	for (i in 1.._substitutedPlates->size()) { 
+		CanBeSubstitutedBy.createLink(p1=>p,p2=>_substitutedPlates[i]); 
+	}
+}
+
+
+activity addMenu (in _name:String, in _price:Real, in _plates:Plate[3..*]){  
+	if ( !Menu.allInstances()->exists(m|m.name=_name) ){
+		Menu m = new Menu(); 
+		m.name = _name; 
+		m.price = _price; 
+		for (i in 1.._plates->size()){ 
+	 		IsComposedOf.createLink(menu=>m,plate=>_plates[i]); 
+		}
+	}
+}
+
+
+activity classifyAsSpecialMenu (in _discount:Real){ 
+	if ( _discount > 10 ){ 
+		classify self to SpecialMenu; 
+		self.discount = _discount;
+	}
+}
+
+activity classifyAsSpecialMenu3 (in _discount:Real){
+	SpecialMenu x;
+	if ( _discount > 10 ){
+		if (x.oclIsTypeOf(SpecialMenu)){
+			classify x from SpecialMenu;
+		}
+		classify self to SpecialMenu;
+		self.discount = _discount;
+	}
+}
+
+activity classifyAsSpecialMenu2 (in _discount:Real){ 
+	SpecialMenu x;
+	if ( _discount > 10 ){ 
+		if (x.oclIsTypeOf(SpecialMenu)){
+			x.destroy();
+		}
+		classify self to SpecialMenu; 
+		self.discount = _discount;
+	}
+}
+
+activity provaDestroyObject(){
+	SpecialMenu sm;
+  	if (sm.oclIsTypeOf(SpecialMenu)){
+		sm.destroy();
+	}
+}
+
+activity provaAddStructuralFeature_ID_Alt1(){
+	if ( _discount > 10 ){
+		if ( !Menu.allInstances()->exists(m|m.name=_name) ){
+	  		SpecialMenu sm = new SpecialMenu();
+			sm.discount = _discount;
+			sm.name = _name;
+			sm.price = X;
+			IsComposedOf.createLink(menu=>sm,plate=>p1); 
+			IsComposedOf.createLink(menu=>sm,plate=>p2); 
+			IsComposedOf.createLink(menu=>sm,plate=>p3); 
+		}
+	}
+}
+
+activity provaAddStructuralFeature_ID_Alt2(in m2:SpecialMenu){
+	if ( _discount > 10 ){
+		if ( m2.name == _name ){
+			m2.name = _name3;
+	  		SpecialMenu sm = new SpecialMenu();
+			sm.discount = _discount;
+			sm.name = _name;
+			sm.price = X;
+		}
+	}
+}
+
+activity provaAddStructuralFeature_ID_Alt3(in m2:SpecialMenu){
+	if ( _discount > 10 ){
+		if (m2.name == _name ){
+			m2.destroy();
+	  		SpecialMenu sm = new SpecialMenu();
+			sm.discount = _discount;
+			sm.name = _name;
+			sm.price = X;
+			IsComposedOf.createLink(menu=>sm,plate=>p1); 
+			IsComposedOf.createLink(menu=>sm,plate=>p2); 
+			IsComposedOf.createLink(menu=>sm,plate=>p3); 
+		}
+	}
+}
+
+activity provaClearAssociation_Cmin(){
+	RestaurantBranch rb;
+	Menu m1;
+	Offers.clearAssoc(rb);
+	rb.destroy();
+}

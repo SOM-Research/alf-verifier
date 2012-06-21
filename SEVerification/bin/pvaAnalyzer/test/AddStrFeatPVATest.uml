@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_8yyKkBUTEeGot720RW_i3Q" name="AddStrFeatPVATest">
+  <elementImport xmi:id="_8zYnxBUTEeGot720RW_i3Q">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_8zYnxRUTEeGot720RW_i3Q">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_8zYnxhUTEeGot720RW_i3Q">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_8zYnxxUTEeGot720RW_i3Q">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9pB2EBUTEeGot720RW_i3Q" name="Empresa">
+    <generalization xmi:id="_Pm_UYBWsEeGCI9-aM9gGQA" general="_I84CQBWrEeGCI9-aM9gGQA" generalizationSet="_BRaV8BWsEeGCI9-aM9gGQA"/>
+    <ownedAttribute xmi:id="_A61lEBUUEeGot720RW_i3Q" name="nom" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-TfvYBUTEeGot720RW_i3Q" name="Publica">
+    <generalization xmi:id="__kZ9oBUTEeGot720RW_i3Q" general="_9pB2EBUTEeGot720RW_i3Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_CqlrcBUUEeGot720RW_i3Q">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_CqlrcRUUEeGot720RW_i3Q">
+      <language>OCL</language>
+      <body>context Empresa inv nomEmpresa: self.nom = Empresa1</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_K8kTQBUVEeGot720RW_i3Q">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_K8kTQRUVEeGot720RW_i3Q">
+      <language>OCL</language>
+      <body>context Empresa inv nomEmpresaID: Empresa.allInstances()->isUnique(nom)</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Hb-3QBWrEeGCI9-aM9gGQA" name="Empreseta">
+    <generalization xmi:id="_QnJw4BWsEeGCI9-aM9gGQA" general="_I84CQBWrEeGCI9-aM9gGQA" generalizationSet="_BRaV8BWsEeGCI9-aM9gGQA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_I84CQBWrEeGCI9-aM9gGQA" name="Entitat"/>
+  <packagedElement xmi:type="uml:GeneralizationSet" xmi:id="_BRaV8BWsEeGCI9-aM9gGQA" name="Genset1" isCovering="true" isDisjoint="true" generalization="_Pm_UYBWsEeGCI9-aM9gGQA _QnJw4BWsEeGCI9-aM9gGQA"/>
+</uml:Package>

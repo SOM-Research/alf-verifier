@@ -1,0 +1,73 @@
+activity test(in c: Cotxe , in c2: Cotxe){
+	classify f2 from Corredor to Futbolista;
+	if ( Futbolista::AllInstances()->size()<2 ){
+		classify f from Corredor to Futbolista;
+	}
+	f.nom = "Puyol";
+	Possessio.createLink(futbolista=>f,cotxe=>c);
+	Possessio.createLink(cotxe=>c2,futbolista=>f);
+	f2.destroy();
+	
+	classify f3 from Corredor to Futbolista;
+	f3.nom = "Iniesta";
+	Possessio.createLink(futbolista=>f3,cotxe=>c);
+	Possessio.createLink(cotxe=>c2,futbolista=>f3);
+	f3.destroy();
+	
+	classify f4 from Corredor to Futbolista;
+	f4.nom = "Messi";
+	Possessio.createLink(futbolista=>f4,cotxe=>c);
+	Possessio.createLink(cotxe=>c2,futbolista=>f4);
+	if ( f4.oclIsTypeOf(Futbolista) ){
+		classify f4 from Futbolista to Corredor;
+	}
+
+	classify f5 from Corredor to Futbolista;
+}
+
+activity test2(){
+	if ( !f.oclIsTypeOf(Tenista) && !f.oclIsTypeOf(Corredor) ){
+		classify f from Corredor to Futbolista;
+	}
+	classify f2 from Corredor to Futbolista;
+	classify f2 from Corredor to Tenista;	
+}
+
+activity test3(){
+	classify f2 from Futbolista to Corredor;
+	if ( Futbolista::AllInstances()->size()>2 ){
+		classify f from Futbolista to Corredor;
+	}
+	Futbolista f2 = new Futbolista();
+	
+	classify f3 from Futbolista to Corredor;
+	classify f4 from Corredor to Futbolista;
+	
+	if ( f5.cotxe->notEmpty() ){	
+		Possessio.clearAssoc(f5);
+	}
+	classify f5 from Futbolista to Corredor;
+	
+	classify f6 from Futbolista to Corredor;
+}
+
+activity test4(){
+	classify f from Futbolista to Corredor;
+	classify f from Corredor to Tenista;
+	
+	if ( f2.oclIsTypeOf( Tenista ) ){
+		classify f2 from Futbolista to Corredor;
+	}
+}
+
+activity test5(){
+	Possessio.clearAssoc( f );
+	classify f from Futbolista;
+	classify f2 from Futbolista;
+	classify f to Ciclista;
+}
+
+activity test6(){
+	classify f to Ciclista;
+}
+

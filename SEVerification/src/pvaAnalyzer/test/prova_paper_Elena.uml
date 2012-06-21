@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_AP2CgPDREeCAyZTMZhk3oA" name="prova_paper_Elena">
+  <elementImport xmi:id="_AQb4pPDREeCAyZTMZhk3oA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_AQlpYPDREeCAyZTMZhk3oA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_AQlpYfDREeCAyZTMZhk3oA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_AQlpYvDREeCAyZTMZhk3oA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OHB0wPDREeCAyZTMZhk3oA" name="Customer">
+    <ownedAttribute xmi:id="_ZgfAUPDREeCAyZTMZhk3oA" name="name" aggregation="composite"/>
+    <ownedAttribute xmi:id="_bxxtgPDREeCAyZTMZhk3oA" name="email" aggregation="composite">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DEGhUPPbEeC0SLBsblKNzA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_chxAAPDREeCAyZTMZhk3oA" name="password" aggregation="composite">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EOdboPPbEeC0SLBsblKNzA"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_R99DAPDREeCAyZTMZhk3oA" name="Order">
+    <ownedAttribute xmi:id="_eGW_QPDREeCAyZTMZhk3oA" name="id" aggregation="composite"/>
+    <ownedAttribute xmi:id="_elM3YPDREeCAyZTMZhk3oA" name="totalPrice" isDerived="true" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_S3LKAPDREeCAyZTMZhk3oA" name="OrderLine">
+    <ownedAttribute xmi:id="_ftn4APDREeCAyZTMZhk3oA" name="quantity" aggregation="composite"/>
+    <ownedAttribute xmi:id="_hEp8YPDREeCAyZTMZhk3oA" name="price" aggregation="composite"/>
+    <ownedAttribute xmi:id="_z0kOQPl7EeChUsp5WK-RQA" name="iniDate" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UgrecPDREeCAyZTMZhk3oA" name="Product">
+    <ownedAttribute xmi:id="_kjJcgPDREeCAyZTMZhk3oA" name="code" aggregation="composite"/>
+    <ownedAttribute xmi:id="_lI2KkPDREeCAyZTMZhk3oA" name="price" aggregation="composite"/>
+    <ownedAttribute xmi:id="_lyuOAPDREeCAyZTMZhk3oA" name="description" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pFls8PDREeCAyZTMZhk3oA" name="Special">
+    <generalization xmi:id="_4bDbEPDREeCAyZTMZhk3oA" general="_UgrecPDREeCAyZTMZhk3oA"/>
+    <ownedAttribute xmi:id="_rStr0PDREeCAyZTMZhk3oA" name="specialPrice" aggregation="composite"/>
+    <ownedAttribute xmi:id="_sP0NQPDREeCAyZTMZhk3oA" name="iniDate" aggregation="composite"/>
+    <ownedAttribute xmi:id="_s_puwPDREeCAyZTMZhk3oA" name="expiryDate" aggregation="composite"/>
+    <ownedAttribute xmi:id="_ucMlQPDREeCAyZTMZhk3oA" name="enabled" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_62CPwPDREeCAyZTMZhk3oA" name="CanBeSubstitutedBy" memberEnd="_62CPwfDREeCAyZTMZhk3oA _62CPxPDREeCAyZTMZhk3oA">
+    <ownedEnd xmi:id="_62CPwfDREeCAyZTMZhk3oA" name="p2" type="_UgrecPDREeCAyZTMZhk3oA" association="_62CPwPDREeCAyZTMZhk3oA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_62CPw_DREeCAyZTMZhk3oA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_62CPwvDREeCAyZTMZhk3oA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_62CPxPDREeCAyZTMZhk3oA" name="p1" type="_UgrecPDREeCAyZTMZhk3oA" association="_62CPwPDREeCAyZTMZhk3oA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_62CPxvDREeCAyZTMZhk3oA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_62CPxfDREeCAyZTMZhk3oA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RnYgoPDSEeCAyZTMZhk3oA" name="Contains" memberEnd="_RnYgofDSEeCAyZTMZhk3oA _RnYgpPDSEeCAyZTMZhk3oA">
+    <ownedEnd xmi:id="_RnYgofDSEeCAyZTMZhk3oA" name="product" type="_UgrecPDREeCAyZTMZhk3oA" association="_RnYgoPDSEeCAyZTMZhk3oA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RnYgo_DSEeCAyZTMZhk3oA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RnYgovDSEeCAyZTMZhk3oA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_RnYgpPDSEeCAyZTMZhk3oA" name="orderLine" type="_S3LKAPDREeCAyZTMZhk3oA" association="_RnYgoPDSEeCAyZTMZhk3oA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RnYgpvDSEeCAyZTMZhk3oA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RnYgpfDSEeCAyZTMZhk3oA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ZNvYkPDTEeCAyZTMZhk3oA" name="Includes" memberEnd="_ZNvYkfDTEeCAyZTMZhk3oA _ZNvYlPDTEeCAyZTMZhk3oA">
+    <ownedEnd xmi:id="_ZNvYkfDTEeCAyZTMZhk3oA" name="orderLine" type="_S3LKAPDREeCAyZTMZhk3oA" aggregation="composite" association="_ZNvYkPDTEeCAyZTMZhk3oA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZNvYk_DTEeCAyZTMZhk3oA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZNvYkvDTEeCAyZTMZhk3oA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ZNvYlPDTEeCAyZTMZhk3oA" name="order" type="_R99DAPDREeCAyZTMZhk3oA" association="_ZNvYkPDTEeCAyZTMZhk3oA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZNvYlvDTEeCAyZTMZhk3oA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZNvYlfDTEeCAyZTMZhk3oA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_xy9a0PDTEeCAyZTMZhk3oA" name="Acquires" memberEnd="_xy9a0fDTEeCAyZTMZhk3oA _xy9a1PDTEeCAyZTMZhk3oA">
+    <ownedEnd xmi:id="_xy9a0fDTEeCAyZTMZhk3oA" name="order" type="_R99DAPDREeCAyZTMZhk3oA" association="_xy9a0PDTEeCAyZTMZhk3oA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xy9a0_DTEeCAyZTMZhk3oA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xy9a0vDTEeCAyZTMZhk3oA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_xy9a1PDTEeCAyZTMZhk3oA" name="customer" type="_OHB0wPDREeCAyZTMZhk3oA" association="_xy9a0PDTEeCAyZTMZhk3oA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xy9a1vDTEeCAyZTMZhk3oA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xy9a1fDTEeCAyZTMZhk3oA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_GK-nYPDVEeCAyZTMZhk3oA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_GK-nYfDVEeCAyZTMZhk3oA">
+      <language>OCL</language>
+      <body>context Customer inv customerPrimaryKey: Customer.allInstances()->isUnique(name)</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_HwEgcPDWEeCAyZTMZhk3oA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_HwEgcfDWEeCAyZTMZhk3oA">
+      <language>OCL</language>
+      <body>context Order inv orderPrimaryKey: Order.allInstances()->isUnique(id)</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_Iyr0APDWEeCAyZTMZhk3oA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_Iyr0AfDWEeCAyZTMZhk3oA">
+      <language>OCL</language>
+      <body>context Product inv productPrimaryKey: Product.allInstances()->isUnique(code)</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_K10wcPDWEeCAyZTMZhk3oA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_K10wcfDWEeCAyZTMZhk3oA">
+      <language>OCL</language>
+      <body>context Product inv symmetricAssociation: self.p2.p2->includes(self)</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_Mw6kIPDWEeCAyZTMZhk3oA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_Mw6kIfDWEeCAyZTMZhk3oA">
+      <language>OCL</language>
+      <body>context Special inv specialPrice: self.specialPrice &lt; self.price</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_PwZ0EPDWEeCAyZTMZhk3oA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_PwZ0EfDWEeCAyZTMZhk3oA">
+      <language>OCL</language>
+      <body>context Special inv consistentDates: self.iniDate &lt; self.expiryDate</body>
+    </specification>
+  </packagedElement>
+</uml:Package>
