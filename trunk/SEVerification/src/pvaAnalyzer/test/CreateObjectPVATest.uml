@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qYkMYP-mEeCYHr8Meox40A" name="CreateObjectPVATest">
+  <elementImport xmi:id="_qZ-hoP-mEeCYHr8Meox40A">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_qaHrkP-mEeCYHr8Meox40A">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_qaISoP-mEeCYHr8Meox40A">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_qaISof-mEeCYHr8Meox40A">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_ekhnYBwSEeGYTqt31cbYFA"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="__9aN4P-mEeCYHr8Meox40A" name="Empresa">
+    <ownedAttribute xmi:id="_L8AG0P-nEeCYHr8Meox40A" name="nom" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_Om36YP_jEeC3fbsgNNXtrg">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_Om36Yf_jEeC3fbsgNNXtrg">
+      <language>OCL</language>
+      <body>context Empresa inv nomEmpresa: nom = NomEmpresa</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8OSL0BUSEeGot720RW_i3Q" name="Publica">
+    <generalization xmi:id="_9a4h0BUSEeGot720RW_i3Q" general="__9aN4P-mEeCYHr8Meox40A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ubRJ4Cr1EeGdC_Ixz5exPw" name="Client"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wCF9wCr1EeGdC_Ixz5exPw" name="Clients" memberEnd="_wCF9wSr1EeGdC_Ixz5exPw _wCF9xCr1EeGdC_Ixz5exPw">
+    <ownedEnd xmi:id="_wCF9wSr1EeGdC_Ixz5exPw" name="empresa" type="__9aN4P-mEeCYHr8Meox40A" association="_wCF9wCr1EeGdC_Ixz5exPw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wCF9wyr1EeGdC_Ixz5exPw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wCF9wir1EeGdC_Ixz5exPw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_wCF9xCr1EeGdC_Ixz5exPw" name="client" type="_ubRJ4Cr1EeGdC_Ixz5exPw" association="_wCF9wCr1EeGdC_Ixz5exPw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wCF9xir1EeGdC_Ixz5exPw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wCF9xSr1EeGdC_Ixz5exPw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_GT8QsD01EeGksvjQek7WLA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_GURn4D01EeGksvjQek7WLA">
+      <language>OCL</language>
+      <body>context Empresa inv maxEmpreses: class.allInstances() -> size() > 3</body>
+    </specification>
+  </packagedElement>
+</uml:Package>

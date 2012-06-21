@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_GkJEwBW1EeGCI9-aM9gGQA" name="CreateLinkPVATest">
+  <elementImport xmi:id="_GliL4BW1EeGCI9-aM9gGQA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_Gliy8BW1EeGCI9-aM9gGQA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_Gliy8RW1EeGCI9-aM9gGQA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_Gliy8hW1EeGCI9-aM9gGQA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XroxMBW1EeGCI9-aM9gGQA" name="Empresa"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_YqMrMBW1EeGCI9-aM9gGQA" name="Treballador"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_au8KIBW1EeGCI9-aM9gGQA" name="Contracte" memberEnd="_au9_UBW1EeGCI9-aM9gGQA _au_NcRW1EeGCI9-aM9gGQA">
+    <ownedEnd xmi:id="_au9_UBW1EeGCI9-aM9gGQA" name="empresa" type="_XroxMBW1EeGCI9-aM9gGQA" association="_au8KIBW1EeGCI9-aM9gGQA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_au_NcBW1EeGCI9-aM9gGQA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_au-mYBW1EeGCI9-aM9gGQA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_au_NcRW1EeGCI9-aM9gGQA" name="treballador" type="_YqMrMBW1EeGCI9-aM9gGQA" association="_au8KIBW1EeGCI9-aM9gGQA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_au_NcxW1EeGCI9-aM9gGQA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_au_NchW1EeGCI9-aM9gGQA" value="2"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hEeTYBW2EeGCI9-aM9gGQA" name="Relacio" memberEnd="_hEeTYRW2EeGCI9-aM9gGQA _hEfhgRW2EeGCI9-aM9gGQA">
+    <ownedEnd xmi:id="_hEeTYRW2EeGCI9-aM9gGQA" name="proveidor" type="_XroxMBW1EeGCI9-aM9gGQA" association="_hEeTYBW2EeGCI9-aM9gGQA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A5UbkBdYEeGSroLoNa2aqg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A5UbkRdYEeGSroLoNa2aqg"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_hEfhgRW2EeGCI9-aM9gGQA" name="client" type="_XroxMBW1EeGCI9-aM9gGQA" association="_hEeTYBW2EeGCI9-aM9gGQA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hEfhgxW2EeGCI9-aM9gGQA" value="3"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hEfhghW2EeGCI9-aM9gGQA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_6R-ZcBqfEeGec6sBGvSdgQ">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_6SbFYBqfEeGec6sBGvSdgQ">
+      <language>OCL</language>
+      <body>context Empresa inv symEmpr: self.client -> forAll(o1|o1.client->includes(self))</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_9JJSoEA1EeG3q4j245jZIA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_9Jl-kEA1EeG3q4j245jZIA">
+      <language>OCL</language>
+      <body>context Empresa inv irreflEmp: self.client->excludes(self)</body>
+    </specification>
+  </packagedElement>
+</uml:Package>

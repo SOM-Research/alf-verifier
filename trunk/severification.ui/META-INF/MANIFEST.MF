@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SEVerificationUI
+Bundle-SymbolicName: severification.ui; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: severification.ui.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: .,
+ libs/com.google.collect_0.8.0.v201102150722.jar,
+ libs/com.google.inject_2.0.0.v201003051000.jar,
+ libs/jgrapht-jdk1.5-0.7.3.jar,
+ libs/org.antlr.runtime_3.0.0.v200803061811.jar,
+ libs/org.apache.log4j_1.2.15.v201005080500.jar,
+ libs/org.eclipse.emf.common_2.6.0.v20100914-1218.jar,
+ libs/org.eclipse.emf.ecore_2.6.1.v20100914-1218.jar,
+ libs/org.eclipse.emf.ecore.xmi_2.5.0.v20100521-1846.jar,
+ libs/org.eclipse.uml2.common_1.5.0.v201005031530.jar,
+ libs/org.eclipse.uml2.uml_3.1.2.v201010261927.jar,
+ libs/org.eclipse.uml2.uml.ecore.importer_2.4.0.v201005031530.jar,
+ libs/org.eclipse.uml2.uml.resources_3.1.1.v201008191505.jar,
+ libs/org.eclipse.xtext_1.0.2.v201102150722.jar,
+ libs/org.eclipse.xtext.util_1.0.2.v201102150722.jar,
+ libs/severifier.jar,
+ libs/org.xtext.alf.jar

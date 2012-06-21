@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_AnLJcUKLEeG7Y_yIlM-slA" name="testElena">
+  <elementImport xmi:id="_AuUTQEKLEeG7Y_yIlM-slA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_AueEQEKLEeG7Y_yIlM-slA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_AueEQUKLEeG7Y_yIlM-slA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_AueEQkKLEeG7Y_yIlM-slA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KjzxsEKLEeG7Y_yIlM-slA" name="RestaurantBranch">
+    <ownedAttribute xmi:id="_M36iUEKLEeG7Y_yIlM-slA" name="address" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_OkIMgEKLEeG7Y_yIlM-slA" name="phone" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_b0oZQEKLEeG7Y_yIlM-slA" name="Menu">
+    <ownedAttribute xmi:id="_ckSUkEKLEeG7Y_yIlM-slA" name="name" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_dLcbMEKLEeG7Y_yIlM-slA" name="price" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tX738EKLEeG7Y_yIlM-slA" name="Plate">
+    <ownedAttribute xmi:id="_vWNigEKLEeG7Y_yIlM-slA" name="description" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_w_BTYEKLEeG7Y_yIlM-slA" name="type" type="_Dg-LoEKMEeG7Y_yIlM-slA" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3FKyQEKLEeG7Y_yIlM-slA" name="City">
+    <ownedAttribute xmi:id="_5k1SoEKLEeG7Y_yIlM-slA" name="zipCode" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="__UBqEEKLEeG7Y_yIlM-slA" name="SpecialMenu">
+    <generalization xmi:id="_fWggEFxfEeG1NcXfskYnTg" general="_b0oZQEKLEeG7Y_yIlM-slA"/>
+    <ownedAttribute xmi:id="_AZ8wUEKMEeG7Y_yIlM-slA" name="discount" aggregation="composite">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EDouble"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_Dg-LoEKMEeG7Y_yIlM-slA" name="PlateType">
+    <ownedLiteral xmi:id="_YeOosEKMEeG7Y_yIlM-slA" name="Starter"/>
+    <ownedLiteral xmi:id="_dgiE8EKMEeG7Y_yIlM-slA" name="MainCourse"/>
+    <ownedLiteral xmi:id="_etau0EKMEeG7Y_yIlM-slA" name="Dessert"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_twS4IEKMEeG7Y_yIlM-slA" name="Offers" memberEnd="_twcCEEKMEeG7Y_yIlM-slA _twcCE0KMEeG7Y_yIlM-slA">
+    <ownedEnd xmi:id="_twcCEEKMEeG7Y_yIlM-slA" name="restaurantBranch" type="_KjzxsEKLEeG7Y_yIlM-slA" association="_twS4IEKMEeG7Y_yIlM-slA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_twcCEkKMEeG7Y_yIlM-slA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_twcCEUKMEeG7Y_yIlM-slA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_twcCE0KMEeG7Y_yIlM-slA" name="menu" type="_b0oZQEKLEeG7Y_yIlM-slA" association="_twS4IEKMEeG7Y_yIlM-slA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_twcCFUKMEeG7Y_yIlM-slA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_twcCFEKMEeG7Y_yIlM-slA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7GsRgEKMEeG7Y_yIlM-slA" name="LocatedIn" memberEnd="_7GsRgUKMEeG7Y_yIlM-slA _7GsRhEKMEeG7Y_yIlM-slA">
+    <ownedEnd xmi:id="_7GsRgUKMEeG7Y_yIlM-slA" name="restaurantBranch" type="_KjzxsEKLEeG7Y_yIlM-slA" association="_7GsRgEKMEeG7Y_yIlM-slA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7GsRg0KMEeG7Y_yIlM-slA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7GsRgkKMEeG7Y_yIlM-slA"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="__qAEoEKMEeG7Y_yIlM-slA" value=""/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_7GsRhEKMEeG7Y_yIlM-slA" name="city" type="_3FKyQEKLEeG7Y_yIlM-slA" association="_7GsRgEKMEeG7Y_yIlM-slA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7GsRhkKMEeG7Y_yIlM-slA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7GsRhUKMEeG7Y_yIlM-slA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JSheEEKNEeG7Y_yIlM-slA" name="IsComposedOf" memberEnd="_JSheEUKNEeG7Y_yIlM-slA _JSheFEKNEeG7Y_yIlM-slA">
+    <ownedEnd xmi:id="_JSheEUKNEeG7Y_yIlM-slA" name="menu" type="_b0oZQEKLEeG7Y_yIlM-slA" association="_JSheEEKNEeG7Y_yIlM-slA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JSheE0KNEeG7Y_yIlM-slA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JSheEkKNEeG7Y_yIlM-slA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_JSheFEKNEeG7Y_yIlM-slA" name="plate" type="_tX738EKLEeG7Y_yIlM-slA" aggregation="shared" association="_JSheEEKNEeG7Y_yIlM-slA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JSheFkKNEeG7Y_yIlM-slA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JSheFUKNEeG7Y_yIlM-slA" value="3"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_ps1YAEKzEeG7Y_yIlM-slA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_ps1YAUKzEeG7Y_yIlM-slA">
+      <language>OCL</language>
+      <body>context Menu inv menuPrimaryKey: Menu.allInstances()->isUnique(name)</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_qJI5gEKzEeG7Y_yIlM-slA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_qJI5gUKzEeG7Y_yIlM-slA">
+      <language>OCL</language>
+      <body>context SpecialMenu inv validDiscount: self.discount > 10</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_qd2lQEKzEeG7Y_yIlM-slA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_qd2lQUKzEeG7Y_yIlM-slA">
+      <language>OCL</language>
+      <body>context Plate inv symmetricAssociation: self.p2.p2->includes(self)</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fUwXoEK4EeG7Y_yIlM-slA" name="CanBeSubstitutedBy" memberEnd="_fUwXoUK4EeG7Y_yIlM-slA _fUwXpEK4EeG7Y_yIlM-slA">
+    <ownedEnd xmi:id="_fUwXoUK4EeG7Y_yIlM-slA" name="p1" type="_tX738EKLEeG7Y_yIlM-slA" association="_fUwXoEK4EeG7Y_yIlM-slA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fUwXo0K4EeG7Y_yIlM-slA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fUwXokK4EeG7Y_yIlM-slA"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_fUwXpEK4EeG7Y_yIlM-slA" name="p2" type="_tX738EKLEeG7Y_yIlM-slA" association="_fUwXoEK4EeG7Y_yIlM-slA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fUwXpkK4EeG7Y_yIlM-slA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fUwXpUK4EeG7Y_yIlM-slA"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_qAtQkEtWEeGrIbRw7Kt6bA">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_qAtQkUtWEeGrIbRw7Kt6bA">
+      <language>OCL</language>
+      <body>context SpecialMenu inv atMostSpecialMenus: SpecialMenu.allInstances()->size() &lt;= 3</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_L-spAFu-EeGO2qHb8S12uw">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_MAVnwFu-EeGO2qHb8S12uw">
+      <language>OCL</language>
+      <body>context SpecialMenu inv atLeastOneSpecialMenu: SpecialMenu.allInstances()->size() = 1</body>
+    </specification>
+  </packagedElement>
+</uml:Package>

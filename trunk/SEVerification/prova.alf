@@ -1,0 +1,8 @@
+activity provaClearAssociation_Cmin(){
+	Offers.clearAssoc(restaurantBranch);
+}
+
+activity provaClearAssociation_Cmin2(){
+	RestaurantBranch restaurantBranch = new RestaurantBranch();
+	Offers.clearAssoc(restaurantBranch);
+}

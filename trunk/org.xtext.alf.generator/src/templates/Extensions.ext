@@ -1,0 +1,4 @@
+import org::xtext::alf::alf;
+
+sortedGreetings(Model this) :
+	this.greetings.sortBy(g|g.name.toLowerCase());

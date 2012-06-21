@@ -1,0 +1,27 @@
+activity test(in e2: Empresa){
+	Empresa e = new Empresa();
+	
+	if (a==1){
+		personal.clearAssoc(e);
+		localitzacio.clearAssoc(e);
+	}
+	
+	e.destroy();
+	
+	Empreseta e1 = new Empreseta();
+	classify e1 from Empreseta to Empresa;
+	
+	
+	e1.destroy();
+	
+	e2.nom = "Ceramiques Guzman";
+	e2.destroy();
+	
+}
+
+activity test2(in e2: Empresa){
+	if ( Empresa::AllInstances()->size()>=variable ){
+		e2.nom = "Ceramiques Guzman";
+		e2.destroy();
+	}
+}

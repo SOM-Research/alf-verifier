@@ -1,0 +1,15 @@
+activity test(in e2: Empresa){
+	Empresa e = new Empresa();
+	Empresa e3 = new Empresa();
+	if ( e2.nom == "Empresa1" ){
+		e2.nom = "Empresa3";
+	}
+	if ( "Empresa1" == "Empresa1" ){
+		e.nom = "Empresa1";
+		e3.nom = "Empresa1";
+	}
+	
+}
+
+activity test2(){
+}

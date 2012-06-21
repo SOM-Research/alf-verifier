@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_CmhMAdIyEeC036Rbsk59xw" name="exemple">
+  <elementImport xmi:id="_CsobENIyEeC036Rbsk59xw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_CsxlANIyEeC036Rbsk59xw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_CsxlAdIyEeC036Rbsk59xw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_CsxlAtIyEeC036Rbsk59xw">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IpEkUNIyEeC036Rbsk59xw" name="Empresa">
+    <ownedAttribute xmi:id="_LfwdkNIyEeC036Rbsk59xw" name="nom" aggregation="composite">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cd66QN0nEeCwVfiCOzCt0g" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_rKXt0NI1EeC036Rbsk59xw" name="domicili" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_Nrsz4NI2EeC036Rbsk59xw">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_Nrsz4dI2EeC036Rbsk59xw">
+      <language>OCL</language>
+      <body>context Empresa inv : self.departament -> forAll(obj|obj.empresa->includes(self))</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3nUu8NL_EeC8mInt1EqtmQ" name="Departament">
+    <ownedAttribute xmi:id="__k8FwNL_EeC8mInt1EqtmQ" name="nom" aggregation="composite"/>
+    <ownedOperation xmi:id="_Tbt8YNVEEeCgjbnXtRKWAg" name="main">
+      <ownedParameter xmi:id="_Uq2B8NVEEeCgjbnXtRKWAg" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DjAd0NMAEeC8mInt1EqtmQ" name="pertany_a" memberEnd="_DjAd0dMAEeC8mInt1EqtmQ _DjAd1NMAEeC8mInt1EqtmQ">
+    <ownedEnd xmi:id="_DjAd0dMAEeC8mInt1EqtmQ" name="departament" type="_3nUu8NL_EeC8mInt1EqtmQ" association="_DjAd0NMAEeC8mInt1EqtmQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DjAd09MAEeC8mInt1EqtmQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DjAd0tMAEeC8mInt1EqtmQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_DjAd1NMAEeC8mInt1EqtmQ" name="empresa" type="_IpEkUNIyEeC036Rbsk59xw" association="_DjAd0NMAEeC8mInt1EqtmQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DjAd1tMAEeC8mInt1EqtmQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DjAd1dMAEeC8mInt1EqtmQ" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_0uBhUNPVEeCMcK3CC0EWoQ">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_0uUcQNPVEeCMcK3CC0EWoQ">
+      <language>OCL</language>
+      <body>context Empresa inv nomUnicEmpresa: Empresa.allInstances() -> isUnique(nom)</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_PRA30NPWEeCMcK3CC0EWoQ">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_PRA30dPWEeCMcK3CC0EWoQ">
+      <language>OCL</language>
+      <body>context Empresa inv asymEmpresaDept: self.departament -> forAll(obj|obj.empresa -> excludes(self))</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_X-AdINPWEeCMcK3CC0EWoQ">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_X-AdIdPWEeCMcK3CC0EWoQ">
+      <language>OCL</language>
+      <body>context Empresa inv irreflEmpresa: self.client -> excludes(self)</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_kj_GMNPWEeCMcK3CC0EWoQ" name="comercial" memberEnd="_kj_GMdPWEeCMcK3CC0EWoQ _kj_GNNPWEeCMcK3CC0EWoQ">
+    <ownedEnd xmi:id="_kj_GMdPWEeCMcK3CC0EWoQ" name="proveidor" type="_IpEkUNIyEeC036Rbsk59xw" association="_kj_GMNPWEeCMcK3CC0EWoQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kj_GM9PWEeCMcK3CC0EWoQ" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kj_GMtPWEeCMcK3CC0EWoQ"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_kj_GNNPWEeCMcK3CC0EWoQ" name="client" type="_IpEkUNIyEeC036Rbsk59xw" association="_kj_GMNPWEeCMcK3CC0EWoQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kj_GNtPWEeCMcK3CC0EWoQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kj_GNdPWEeCMcK3CC0EWoQ"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_761Q0NPWEeCMcK3CC0EWoQ">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_761Q0dPWEeCMcK3CC0EWoQ">
+      <language>OCL</language>
+      <body>context Empresa inv domiciliNoBuit: self.domicili &lt;= 435</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Constraint" xmi:id="_WxC9YN-gEeCdXMB7PWjssw">
+    <specification xmi:type="uml:OpaqueExpression" xmi:id="_W4DkUN-gEeCdXMB7PWjssw">
+      <language>OCL</language>
+      <body>context Empresa inv maxInstances: class.allInstances() -> size() = 24</body>
+    </specification>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hsUOUOKkEeCyEIF3jHkvig" name="Marketing">
+    <generalization xmi:id="_HvktkOKmEeCyEIF3jHkvig" general="_3nUu8NL_EeC8mInt1EqtmQ" generalizationSet="_4ude0OKlEeCyEIF3jHkvig"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KW-qIOKlEeCyEIF3jHkvig" name="Vendes">
+    <generalization xmi:id="_N5ZykOKmEeCyEIF3jHkvig" general="_3nUu8NL_EeC8mInt1EqtmQ" generalizationSet="_4ude0OKlEeCyEIF3jHkvig"/>
+    <ownedAttribute xmi:id="_ZX5GEO2REeCmTIq6cJKOYg" name="client" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:GeneralizationSet" xmi:id="_4ude0OKlEeCyEIF3jHkvig" name="genset1" isCovering="true" isDisjoint="true" generalization="_HvktkOKmEeCyEIF3jHkvig _N5ZykOKmEeCyEIF3jHkvig"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="__OcSEO5uEeCsatihqOzFhQ" name="PIME">
+    <generalization xmi:id="_Er3kEO5vEeCsatihqOzFhQ" general="_IpEkUNIyEeC036Rbsk59xw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_eh9r8BHoEeGFfZeTYI9fhw" name="Compres">
+    <generalization xmi:id="_Kf5PUBHpEeGFfZeTYI9fhw" general="_3nUu8NL_EeC8mInt1EqtmQ" generalizationSet="_-N8VgBHoEeGFfZeTYI9fhw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_e3t5gBHoEeGFfZeTYI9fhw" name="Proveidors">
+    <generalization xmi:id="_Pcly0BHpEeGFfZeTYI9fhw" general="_3nUu8NL_EeC8mInt1EqtmQ" generalizationSet="_-N8VgBHoEeGFfZeTYI9fhw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:GeneralizationSet" xmi:id="_-N8VgBHoEeGFfZeTYI9fhw" name="Genset2" isCovering="true" isDisjoint="true" generalization="_Kf5PUBHpEeGFfZeTYI9fhw _Pcly0BHpEeGFfZeTYI9fhw"/>
+</uml:Package>

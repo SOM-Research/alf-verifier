@@ -1,0 +1,27 @@
+activity newPlate (in _description: String, in _substitutedPlates:Plate[*]){
+	Plate p = new Plate(); 
+	p.description = _description; 
+	for (i in 1.._substitutedPlates->size()) { 
+		CanBeSubstitutedBy.createLink(p1=>p,p2=>_substitutedPlates[i]); 
+	}
+}
+
+
+activity addMenu (in _name:String, in _price:Real, in _plates:Plate[3..*]){  
+	if ( !Menu.allInstances()->exists(m|m.name=_name) ){
+		Menu m = new Menu(); 
+		m.name = _name; 
+		m.price = _price; 
+		for (i in 1.._plates->size()){ 
+	 		IsComposedOf.createLink(menu=>m,plate=>_plates[i]); 
+		}
+	}
+}
+
+
+activity classifyAsSpecialMenu (in _discount:Real){ 
+	if ( _discount > 10 ){ 
+		classify self to SpecialMenu; 
+		self.discount = _discount;
+	}
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="SeverificationTreeView"
+            id="severification.ui">
+      </category>
+      
+      <view
+            name="Alf verifier - feedback"
+            icon="icons/sample.gif"
+            category="severification.ui"
+            class="severification.ui.views.SeverificationTreeView"
+            id="severification.ui.views.SeverificationTreeView">
+      </view>
+      
+      <view
+            category="severification.ui"
+            class="severification.ui.views.SeverificationFileSelectView"
+            icon="icons/sample.gif"
+            id="severification.ui.views.SeverificationFileSelectView"
+            name="Alf verifier - input">
+      </view>
+   </extension>
+   <!--
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="severification.ui.views.SeverificationTreeView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   -->
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>

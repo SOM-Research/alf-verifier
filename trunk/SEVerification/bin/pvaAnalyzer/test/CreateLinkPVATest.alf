@@ -1,0 +1,76 @@
+activity test(in t4: Treballador, in t2: Treballadoret){
+	Empresa e = new Empresa();
+	Empresa e2 = new Empresa();
+	Empresa e3 = new Empresa();
+	Empresa e4 = new Empresa();
+	classify t2 from Treballadoret to Treballador;
+	Contracte.createLink(treballador=>t2,empresa=>e);
+	Contracte.destroyLink(treballador=>t2,empresa=>e);
+	Contracte.createLink(treballador=>t2,empresa=>e2);
+	Treballador t3 = new Treballador();
+	Contracte.createLink(treballador=>t3,empresa=>e3);
+	if ( t4.empresa->size()<=0 ){
+		Contracte.createLink(treballador=>t4,empresa=>e3);
+	}
+	Contracte.createLink(treballador=>t4,empresa=>e4);
+}
+
+activity test2(in e: Empresa , in e2: Empresa){
+	Relacio.createLink(client=>e,proveidor=>e2);
+	Empresa e3 = new Empresa();
+	Empresa e4 = new Empresa();
+	Relacio.createLink(proveidor=>e3,client=>e4);
+	Relacio.createLink(client=>e3,proveidor=>e4);
+}
+
+activity test3(in e: Empresa , in e2: Empresa , in e3: Empresa , in e4: Empresa , in e5: Empresa , in e6: Empresa , in e7: Empresa , in e8: Empresa){
+	Relacio.createLink(client=>e,proveidor=>e2);
+	
+	if ( !e4.proveidor->includes(e3) ){
+		Relacio.createLink(client=>e3,proveidor=>e4);
+	}
+	
+	if ( e6.proveidor->excludes(e5) ){
+		Relacio.createLink(client=>e5,proveidor=>e6);
+	}
+	
+	Relacio.createLink(client=>e7,proveidor=>e8);
+	Relacio.destroyLink(proveidor=>e7,client=>e8);
+}
+
+activity test4(in e: Empresa , in e2: Empresa , in e3: Empresa , in e4: Empresa){
+	if ( e2 != e ){
+		Relacio.createLink(client=>e,proveidor=>e2);
+	}
+	Relacio.createLink(client=>e3,proveidor=>e4);
+}
+
+activity test5(in e: Empresa , in e2: Empresa , in t: Treballador, in t2: Treballador, in t3: Treballador, in t4: Treballador, 
+		in t5: Treballador ){
+	if ( t.empresa->size() > getEmpresa() ){
+		if ( e.treballador->size() > getTreballador() ){
+			Contracte.destroyLink(treballador=>t,empresa=>e);
+		}
+	}
+	Contracte.createLink(treballador=>t3,empresa=>e);
+	Contracte.createLink(treballador=>t2,empresa=>e2);
+	Contracte.destroyLink(treballador=>t2,empresa=>e);
+	Contracte.destroyLink(treballador=>t3,empresa=>e);
+	e.destroy();
+	t3.destroy();
+	Contracte.destroyLink(treballador=>t4,empresa=>e);
+	classify e from Empresa to Empreseta;
+	classify t4 from Treballador to Treballadoret;
+	Contracte.destroyLink(treballador=>t5,empresa=>e);
+	Relacio.destroyLink(client=>e,proveidor=>e2);
+}
+
+activity test6(in e: Empresa , in e2: Empresa , in e3: Empresa , in e4: Empresa ){
+	Relacio.destroyLink(client=>e,proveidor=>e2);
+	Relacio.destroyLink(client=>e2,proveidor=>e);
+	Relacio.destroyLink(client=>e3,proveidor=>e4);
+}
+
+activity test7(in e: Empresa , in e2: Empresa, in e3: Empresa){
+	e.destroy();
+}

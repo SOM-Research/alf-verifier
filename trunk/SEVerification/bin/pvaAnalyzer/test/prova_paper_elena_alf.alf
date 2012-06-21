@@ -1,0 +1,28 @@
+activity classifyAsSpecial(in _specialPrice:Real, in _iniDate:Date, in _expiryDate:Date){
+	classify self from * to Special;
+	self.iniDate = _iniDate;
+	self.specialPrice = _specialPrice;
+	if (_iniDate>=getCurrentDate()){
+		self.enabled = true;
+	} else {
+		self.enabled = false;
+	}
+}
+
+activity newProduct(in _code:String, in _price:Real, in description:String, in _substitutedproducts:product[0..*]){
+	Product p = new Product();
+	p.code = _code;
+	p.price = _price;
+	p.description = _description;
+	for ( i in 1..substitutedProductes->size() ){
+		CanBeSubstitutedBy.createLink(p1=>self, p2=>_substitutedProducts[i]);
+	}
+}
+
+activity newOrderLine( in _order:Order, in _product:Product, in _quantity:Integer){
+	OrderLine ol = new OrderLine();
+	ol.quantity = _quantity;
+	Contains.createLink(orderLine=>ol, product=>_product);
+	ol.price = ol.product.price;
+	Includes.createLink(order=>_order,orderLine=>_ol);
+}

@@ -1,0 +1,31 @@
+activity test(){
+	Empresa e = new Empresa();
+	e.nom = "Ceramiques Guzman";
+	Treballador t = new Treballador();
+	personal.createLink(treballador=>t,empresa=>e);
+	personal.createLink(treballador=>t,empresa=>e);
+	classify self from * to Empresa;
+	if (Empresa.allInstances()->size() > 3){
+		Empresa e2 = new Empresa();
+	}
+	classify e2 from Empresa to Empreseta;
+	personal.createLink(empresa=>e,treballador=>t);
+	Empresa e3 = new Empresa();
+	e.destroy();
+
+}
+
+activity test2(){
+	Empresa e1 = new Empresa();
+	e1.destroy();
+	Empresa e2 = new Empresa();
+	e2.destroy();
+	if (Empresa.allInstances()==1){
+		Empresa e3 = new Empresa();
+	}
+	Empresa e4 = new Empresa();
+}
+
+activity test3(in e: Empreseta , in e2: Empreseta){
+	classify e from Empreseta to Empresa;
+}
