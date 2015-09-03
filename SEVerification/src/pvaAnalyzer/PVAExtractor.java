@@ -6,7 +6,6 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
