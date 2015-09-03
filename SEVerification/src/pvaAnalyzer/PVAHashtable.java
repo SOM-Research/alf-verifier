@@ -6,7 +6,6 @@ import java.util.Iterator;
 public class PVAHashtable<K,V> extends Hashtable<K,V> {
 
 	private static final long serialVersionUID = 1L;
-	
 	@Override
 	public synchronized boolean containsKey(Object key) {
 		Iterator<K> keysIter = this.keySet().iterator();
