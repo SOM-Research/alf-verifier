@@ -2,11 +2,9 @@ package pvaSatisfier;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import pvaAnalyzer.ModelLoader;
 import pvaAnalyzer.model.AssociationCardMin;
 import pvaAnalyzer.model.Constraint;
-
 import severification.actionSemantics.Action;
 import severification.actionSemantics.ActionLink;
 import severification.actionSemantics.ClearAssociation;
