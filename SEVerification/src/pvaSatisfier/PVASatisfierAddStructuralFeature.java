@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import pvaAnalyzer.ModelLoader;
 import pvaAnalyzer.model.Constraint;
 import pvaAnalyzer.model.Id;
 import pvaAnalyzer.model.ValueComp;
+
 import severification.actionSemantics.Action;
 import severification.actionSemantics.AddStructuralFeature;
 import severification.actionSemantics.DestroyObject;
