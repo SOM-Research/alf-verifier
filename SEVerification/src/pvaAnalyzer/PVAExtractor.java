@@ -13,7 +13,6 @@ import org.eclipse.uml2.uml.internal.impl.AssociationImpl;
 import org.eclipse.uml2.uml.internal.impl.ClassImpl;
 import org.eclipse.uml2.uml.internal.impl.GeneralizationSetImpl;
 import org.eclipse.uml2.uml.internal.impl.PropertyImpl;
-
 import pvaAnalyzer.model.ASymmetry;
 import pvaAnalyzer.model.AssociationCardMax;
 import pvaAnalyzer.model.AssociationCardMin;
