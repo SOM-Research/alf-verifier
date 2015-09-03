@@ -100,3 +100,4 @@ activity provaClearAssociation_Cmin(){
 	Offers.clearAssoc(rb);
 	rb.destroy();
 }
+
