@@ -22,6 +22,7 @@ import severification.actionSemantics.ReclassifyObject;
 import severification.actionSemantics.Term;
 import severification.alf.parser.OperationScanner;
 
+
 public class PVASatisfierDestroyObject extends PVASatisfier{
 
 	public boolean isSatisfied(DestroyObject pva, Constraint constraint, ExecutionPath path, ModelLoader ml) {
