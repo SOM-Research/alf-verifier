@@ -12,6 +12,7 @@ import pvaAnalyzer.model.ClassCardMax;
 import pvaAnalyzer.model.Constraint;
 import pvaAnalyzer.model.Disjoint;
 import pvaAnalyzer.model.MandatoryAttribute;
+
 import severification.actionSemantics.Action;
 import severification.actionSemantics.ActionLink;
 import severification.actionSemantics.AddStructuralFeature;
