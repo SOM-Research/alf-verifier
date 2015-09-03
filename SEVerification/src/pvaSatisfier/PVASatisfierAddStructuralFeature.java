@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import pvaAnalyzer.ModelLoader;
 import pvaAnalyzer.model.Constraint;
 import pvaAnalyzer.model.Id;
