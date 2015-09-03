@@ -16,14 +16,14 @@ public class Irreflexivity extends Constraint {
 
 	@Override
 	public String toString() {
-//		return "Irrefl(" + association + ")" + " [" + this.satisfied +"]";
+		//return "Irrefl(" + association + ")" + " [" + this.satisfied +"]";
 		return "Association " + association + " must be irreflexive (" + oclExpr + ").";
 	}
 	
 	public void setAssociation(String association) {
 		this.association = association;
 	}
-
+	
 	public String getAssociation() {
 		return association;
 	}
