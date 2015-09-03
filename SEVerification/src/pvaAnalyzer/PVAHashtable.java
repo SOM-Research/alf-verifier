@@ -18,7 +18,6 @@ public class PVAHashtable<K,V> extends Hashtable<K,V> {
 		}
 		return false;
 	}
-
 	@Override
 	public synchronized V get(Object key) {	
 		Iterator<java.util.Map.Entry<K, V>> entryIter = this.entrySet().iterator();
