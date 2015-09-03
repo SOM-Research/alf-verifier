@@ -3,7 +3,6 @@ package pvaSatisfier;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
-
 import pvaAnalyzer.model.Constraint;
 import severification.actionSemantics.Action;
 import severification.actionSemantics.CreateLink;
