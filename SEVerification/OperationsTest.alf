@@ -6,7 +6,6 @@ activity newPlate (in _description: String, in _substitutedPlates:Plate[*]){
 	}
 }
 
-
 activity addMenu (in _name:String, in _price:Real, in _plates:Plate[3..*]){  
 	if ( !Menu.allInstances()->exists(m|m.name=_name) ){
 		Menu m = new Menu(); 
@@ -17,7 +16,6 @@ activity addMenu (in _name:String, in _price:Real, in _plates:Plate[3..*]){
 		}
 	}
 }
-
 
 activity classifyAsSpecialMenu (in _discount:Real){ 
 	if ( _discount > 10 ){ 
