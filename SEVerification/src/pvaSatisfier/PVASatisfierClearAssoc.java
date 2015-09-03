@@ -2,7 +2,6 @@ package pvaSatisfier;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import pvaAnalyzer.ModelLoader;
 import pvaAnalyzer.model.AssociationCardMin;
 import pvaAnalyzer.model.Constraint;
