@@ -1,7 +1,6 @@
 package severification.alf.facade;
 
 import java.util.ArrayList;
-
 import severification.alf.model.ExecutionPathsDirectedGraph;
 import severification.alf.model.Instruction;
 import severification.alf.parser.BlockProcessor;
